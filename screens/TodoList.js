@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { StyleSheet, View, FlatList, Alert, TouchableWithoutFeedback, Keyboard } from "react-native";
+import { StyleSheet, Text, View, FlatList, Alert, TouchableWithoutFeedback, Keyboard } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import uuid from "uuid-random";
-import { FontAwesome } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
 import { Header, AddTodo, TodoItem } from "../components";
 
 import colors from "../config/colors";
@@ -49,7 +49,8 @@ export default function TodoList({ navigation }) {
     >
       <View style={styles.container}>
         <TouchableOpacity style={styles.icon} onPress={() => navigation.goBack()}>
-          <FontAwesome name="long-arrow-left" size={24} color={colors.white} />
+          <Ionicons name="ios-arrow-back" size={30} color={colors.themeColor} />
+          <Text style={styles.text}>{"Home"}</Text>
         </TouchableOpacity>
         <Header />
         <AddTodo addTodo={addTodo} />
@@ -63,13 +64,20 @@ const styles = StyleSheet.create({
   container: {
     position: "relative",
     flex: 1,
-    paddingTop: 35,
-    backgroundColor: colors.themeColor
+    paddingTop: 30,
+    backgroundColor: colors.tint
   },
   icon: {
-    padding: 20
+    padding: 20,
+    flexDirection: "row",
+    alignItems: "center"
   },
   list: {
     backgroundColor: colors.background
+  },
+  text: {
+    paddingLeft: 20,
+    fontSize: 16,
+    color: colors.themeColor
   }
 });

@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "TodoList",
+    "name": "Task Manager App",
     "slug": "TodoList",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -27,6 +27,7 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "React Native Task Manager App"
   }
 }

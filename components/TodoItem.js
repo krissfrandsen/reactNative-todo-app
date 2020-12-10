@@ -10,9 +10,9 @@ function TodoItem({ item, deleteTodo, completeHandler }) {
         <Text style={[styles.itemText, item.completed && { textDecorationLine: "line-through" }]}>{item.text}</Text>
         <View style={styles.icon}>
           <TouchableOpacity style={styles.button} onPress={() => completeHandler(item.id)}>
-            <MaterialCommunityIcons name="check-bold" size={30} color={item.completed ? "rgb(154,205,50)" : "rgb(178, 34, 34)"} />
+            <MaterialCommunityIcons name="check-bold" size={30} color={item.completed ? "rgb(79,198,158)" : "rgb(221,83,83)"} />
           </TouchableOpacity>
-          <MaterialCommunityIcons style={styles.button} name="trash-can-outline" size={30} color="rgb(178, 34, 34)" onPress={() => deleteTodo(item.id)} />
+          <MaterialCommunityIcons style={styles.button} name="trash-can-outline" size={30} color="rgb(221,83,83)" onPress={() => deleteTodo(item.id)} />
         </View>
       </View>
     </View>

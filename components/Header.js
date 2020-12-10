@@ -15,12 +15,12 @@ export default Header;
 
 const styles = StyleSheet.create({
   header: {
-    paddingTop: 30,
-    paddingLeft: 30,
-    backgroundColor: colors.themeColor
+    paddingTop: 20,
+    paddingLeft: 20,
+    backgroundColor: colors.tint
   },
   text: {
-    color: colors.white,
+    color: colors.themeColor,
     fontSize: 30
   }
 });
